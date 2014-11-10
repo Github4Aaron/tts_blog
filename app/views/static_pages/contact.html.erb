@@ -1,0 +1,39 @@
+<h1>Contact Page</h1>
+<h2> Please contact me if you are impressed with my ruby skills!  </h2>
+<p>  Please push the button below if you would like to schedule me for a speaking enggament to discuss rails.  No hard questions please. </p>
+<button id="mybutton">Contact Me, Please!!!!</button>
+
+
+<div id="output"></div>
+
+<script>
+
+$("#mybutton" ).on( "click", function() {
+    var pickles=$('#textOne').val();
+   
+    
+    if (isNaN(pickles)) 
+        {alert('Great Job')
+        $('#output').text(pickles)
+    }
+    
+    else {alert("Please Use Text")
+    $('#output').text(pickles)};
+    
+    if (pickles.length > 10)
+    {alert("please shorten your answer")};
+    
+    
+    $("#output").css("background-color", "blue");
+
+                                });
+
+$('#textOne').keydown(function (e){
+    if(e.keyCode == 13){
+        alert('you pressed enter ^_^');
+    }
+})
+
+
+
+</script>
